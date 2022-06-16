@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<style>
+    .img_holder img {
+        max-width: 100%;
+        max-height: 100%;
+    }
+
+    .btn-file {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .btn-file input[type=file] {
+        position: absolute;
+        top: 0;
+        right: 0;
+        min-width: 100%;
+        min-height: 100%;
+        font-size: 100px;
+        text-align: right;
+        filter: alpha(opacity=0);
+        opacity: 0;
+        outline: none;
+        background: white;
+        cursor: inherit;
+        display: block;
+    }
+</style>
+
+<div style="background: linear-gradient(to right, #035c62, #18ba95);; min-height: 100vh; margin: 0; background-size: cover; background-repeat: no-repeat;">
+    <div class="container text-center" style="padding-top: 10vh; width:80%; max-width: 600px;">
+        <h3 style="padding:30px; line-height: 40px; word-spacing: 2px; font-weight: 700; font-size: 36px;">Wild Or No Wild?</h3>  
+        <form action="/upload" method="post" enctype="multipart/form-data" style="padding: 15px auto;">
+            <span class="text-left btn btn-file btn-outline-danger">
+                Upload Image <input type="file" name="image">
+            </span>
+            <span class="text-right">
+                <input type="submit" value="Predict" class="btn btn-primary">
+            </span>
+        </form>
+        <br>
+        <br>
+        <h4 style="color: red;">{{message}}</h4>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div style="width: 90%; margin: auto; text-align: center;">
+    <img src="{{ url_for('send_file', filename=image_file_name)}}" style ="max-width: 500px; max-height: 450px; margin-top: 30px; margin-bottom: 10px">
+    <p style="font-style: italic">{{ image_file_name }}</p>
+
+
+        <h3>This is a {{label}} with {{accuracy}}% accuracy</h3>
+     <a href="/upload">Back to Home</a>
+</div>
+
+{% endblock %}

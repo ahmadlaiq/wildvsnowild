@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<div style="height: 100vh; box-sizing: border-box; background-image: url(../static/img/welcome.jpg);
+background-size: cover;
+background-repeat: no-repeat; 
+align-items:center; 
+text-align: center;">
+
+    <div class="text-center">
+        <h1 style="padding: 30px 10px 10px 10px; line-height: 40px; word-spacing: 2px; font-weight: 700; font-size: 36px;">HELLO, WELCOME TO WILD VS NO WILD CLASSIFIER!</h1>
+        <h4 style="padding: 15px; ">Click below to continue</h4>
+        <a href="{{url_for('upload_image')}}"><button class="btn btn-primary">CONTINUE</button></a>
+    </div>
+</div>
+
+{% endblock %}
